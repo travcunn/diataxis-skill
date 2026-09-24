@@ -1,6 +1,6 @@
 ---
 name: diataxis
-description: Use when writing or restructuring documentation of any kind, including README files, docs sites, tutorials, getting-started or quickstart pages, how-to guides, runbooks, CLI or API reference, or architecture and design explanations. Also use when reviewing or auditing existing docs, deciding what kind of document something is or where content belongs, or when docs are described as confusing or as mixing concepts with instructions. Applies whenever Diataxis is mentioned by name.
+description: Use when writing, reviewing, auditing, or restructuring documentation of any kind, including README files, docs sites, tutorials, getting-started or quickstart pages, how-to guides, runbooks, CLI or API reference, or architecture and design explanations. Also use when checking a single doc page or README for problems, deciding what kind of document something is or where content belongs, or when docs are described as confusing or as mixing concepts with instructions. Applies whenever Diataxis is mentioned by name.
 ---
 
 # Diataxis
@@ -26,7 +26,7 @@ Adapted from diataxis.fr by Daniele Procida, CC BY-SA 4.0. Full text in `referen
 
 Use for:
 - Writing or restructuring documentation of any kind: READMEs, docs sites, tutorials, quickstarts, how-to guides, runbooks, CLI or API reference, design explanations.
-- Reviewing or auditing existing docs.
+- Reviewing or auditing existing docs, including a single page or README.
 - Deciding what kind of document something is, or where content belongs.
 - A complaint that docs are confusing or mix concepts with instructions.
 - Any mention of Diataxis by name.
@@ -52,6 +52,13 @@ Before writing anything, or when asked what kind of document something is.
 1. Classify the request first.
 2. Load that type's page: [tutorials.md](reference/tutorials.md), [how-to-guides.md](reference/how-to-guides.md), [reference.md](reference/reference.md), or [explanation.md](reference/explanation.md).
 3. Follow that page's structure and language rules. The Quick reference table below states the contract.
+
+If the document is a tutorial, including a getting-started or quickstart page for first-time users, it has exactly these parts, in order:
+- A title naming what the learner will build or do.
+- One sentence stating the concrete outcome the learner will have at the end.
+- Prerequisites with exactly one install method. Other install methods belong in a how-to guide.
+- Numbered steps. Each step is one action, the exact command or code, and an expected-result block showing the output or visible change the learner should see. Every step has an expected-result block, including steps that only create or edit a file.
+- A closing line stating what the learner achieved, then one link to further how-to guides and one link to explanation.
 
 ### Review or audit existing docs
 Factual errors block everything else. Type-mixing is the primary structural finding.
