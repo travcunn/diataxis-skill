@@ -8,12 +8,12 @@
 set -euo pipefail
 
 here="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-pandoc_bin="/opt/homebrew/bin/pandoc"
+pandoc_bin="$(command -v pandoc || true)"
 repo_url="https://github.com/evildmp/diataxis-documentation-framework"
 out_dir="$here/reference"
 
-if ! command -v "$pandoc_bin" >/dev/null 2>&1; then
-  echo "error: pandoc not found at $pandoc_bin" >&2
+if [[ -z "$pandoc_bin" ]]; then
+  echo "error: pandoc not found on PATH" >&2
   exit 1
 fi
 

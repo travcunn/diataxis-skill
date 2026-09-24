@@ -30,7 +30,7 @@ Nothing to invoke. The agent loads the skill on its own when a task involves wri
 bash update.sh
 ```
 
-The script shallow-clones the upstream repository and regenerates every page in `reference/`. It needs `python3` and `pandoc` at `/opt/homebrew/bin/pandoc`.
+The script shallow-clones the upstream repository and regenerates every page in `reference/`. It needs `python3` and `pandoc` on `PATH`.
 
 ## License and attribution
 

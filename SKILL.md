@@ -54,19 +54,19 @@ Before writing anything, or when asked what kind of document something is.
 3. Follow that page's structure and language rules. The Quick reference table below states the contract.
 
 ### Review or audit existing docs
-Type-mixing is the root defect, so it is reported first.
-1. Label every section by type, not just the page as a whole.
-2. Report sections that mix types, or a page whose type does not match its title, as the primary findings.
-3. Check each section against its own type's rules, from that type's page and [quality.md](reference/quality.md).
-4. Only then check facts, completeness, and style.
+Factual errors block everything else. Type-mixing is the primary structural finding.
+1. Report factual errors first, as blockers: wrong commands, flags, values, or described behavior. Diataxis cannot fix these, but applying it tends to expose them.
+2. Label every section by type, not just the page as a whole.
+3. Report sections that mix types, or a page whose type does not match its title, as the primary structural findings.
+4. Check each section against its own type's rules, from that type's page and [quality.md](reference/quality.md).
+5. Check completeness and style last.
 
 Load [quality.md](reference/quality.md) plus whichever type pages the content touches.
 
 ### Structure or restructure a docs set
-1. Treat the four types as the top level, with topic as a second level inside each.
-2. Work from the existing pages rather than designing a complete architecture up front.
-3. Apply the iterative method from [how-to-use-diataxis.md](reference/how-to-use-diataxis.md): pick any page, classify it, make one improvement, publish it, repeat.
-4. For large or multi-product docs, also load [application.md](reference/application.md).
+1. Do not design a four-part architecture up front. Never create empty tutorial, how-to, reference, or explanation sections.
+2. Apply the iterative method from [how-to-use-diataxis.md](reference/how-to-use-diataxis.md): pick any page, classify it, make one improvement, publish it, repeat.
+3. Once several pages of one type exist, move them under that type's heading. The four-type top level forms this way, from the inside, with topic as a second level inside each type.
 
 Load [map.md](reference/map.md) and [how-to-use-diataxis.md](reference/how-to-use-diataxis.md).
 
@@ -83,11 +83,11 @@ Load [map.md](reference/map.md) and [how-to-use-diataxis.md](reference/how-to-us
 
 | Mistake | Fix |
 |---|---|
-| Docs organized by product area, with only one type split out | Restructure the top level around the four types, with topic as a second level inside each. |
+| Docs organized by product area, with only one type split out | Improve pages one at a time by type. Move pages under a type heading once several of that type exist, rather than reorganizing the whole top level at once. |
 | A getting-started page lists commands with no stated outcome and nothing built | Rewrite as a tutorial with one concrete goal the learner achieves, and a visible result at every step. |
 | Explanation, such as "why this design", embedded in a reference page | Move it to an explanation page. Leave at most one link-out sentence behind. |
 | How-to procedures, such as "retrying an operation", embedded in a reference page | Move the procedure to its own how-to guide. Reference states facts only. |
-| A review ranks type-mixing as a minor style note, after factual nitpicks | Report type-mixing first. It is the root defect the other findings follow from. |
+| A review ranks type-mixing as a minor style note | Report type-mixing as the primary structural finding, right after any factual errors. Most other structural findings follow from it. |
 | A getting-started or tutorial page opens with a design-philosophy paragraph | A tutorial must not explain. Move the paragraph to an explanation page and link to it from the tutorial. |
 | A tutorial teaches by explaining a concept instead of having the learner do something | Replace the exposition with a step the learner performs and a result they observe. |
 | A reference page justifies or opines on a design choice | Move the justification to explanation. Reference only describes. |
@@ -96,7 +96,6 @@ Load [map.md](reference/map.md) and [how-to-use-diataxis.md](reference/how-to-us
 
 | File | Covers | Load when |
 |---|---|---|
-| [index.md](reference/index.md) | Diataxis overview and site contents | First orientation |
 | [start-here.md](reference/start-here.md) | Five-minute primer on all four types, the map, and the compass | A quick refresher |
 | [compass.md](reference/compass.md) | The two classifying questions | Classifying any section or page |
 | [map.md](reference/map.md) | The two-dimensional structure, why topic-based structure fails, and how types blur | Structuring a docs set |
@@ -108,10 +107,5 @@ Load [map.md](reference/map.md) and [how-to-use-diataxis.md](reference/how-to-us
 | [reference-explanation.md](reference/reference-explanation.md) | Reference versus explanation, in depth | The distinction is unclear |
 | [quality.md](reference/quality.md) | Functional versus deep quality, and what Diataxis can and cannot fix | Reviewing or auditing existing docs |
 | [how-to-use-diataxis.md](reference/how-to-use-diataxis.md) | The iterative workflow of choosing, assessing, deciding, and doing | Restructuring a docs set |
-| [application.md](reference/application.md) | Index into the four type pages plus the workflow tools | Orienting in a large or multi-product docs set |
 | [foundations.md](reference/foundations.md) | Why exactly four types exist | Justifying the framework or explaining its origin |
-| [theory.md](reference/theory.md) | Index into the theoretical section | Deeper theoretical grounding is needed |
-| [colophon.md](reference/colophon.md) | Authorship, license, and citation | Citing or crediting Diataxis |
 | [SOURCES.md](reference/SOURCES.md) | Provenance of the converted corpus and upstream URLs | Checking a source or refreshing the corpus |
-
-Run `bash update.sh` to refresh the corpus from diataxis.fr.
